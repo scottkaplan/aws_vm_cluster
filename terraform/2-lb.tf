@@ -107,7 +107,9 @@ resource "aws_security_group" "demo-target-sg" {
     from_port   = 8192
     to_port     = 8192
     protocol    = "tcp"
-    security_groups = [aws_security_group.demo-lb-sg.id]
+    cidr_blocks = ["16.0.0.0/16"]
+    # security_groups is more restrictive (i.e. better), but doesn't seem to work
+    # security_groups = [aws_security_group.demo-lb-sg.id]
   }
   # SSH from inside the VPC
   ingress {
