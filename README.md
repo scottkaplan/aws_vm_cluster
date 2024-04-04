@@ -1,6 +1,6 @@
 # aws_vm_cluster
 
-A demo of load balanced VMs with autoscaling deployed in AWS.
+A demo of load balanced VMs with autoscaling deployed in AWS via Terraform.
 
 The load balancer listens on port 443 and has an SSL cert for kaplans.com.
 
