@@ -128,3 +128,15 @@ resource "aws_security_group" "demo-target-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_route53_record" "demo" {
+  zone_id = data.aws_route53_zone.kaplans.zone_id
+  name    = "demo.kaplans.com"
+  type    = "CNAME"
+  ttl     = 300
+  records = [aws_lb.demo-lb.dns_name]
+}
+
+output "lb_dns" {
+  value = aws_lb.demo-lb.dns_name
+}
