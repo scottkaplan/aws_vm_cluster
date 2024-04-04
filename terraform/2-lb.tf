@@ -33,7 +33,7 @@ resource "aws_lb_listener" "demo_fe" {
 resource "aws_launch_template" "demo_launch_templ" {
   name_prefix   = "demo_launch_templ"
   image_id      = "ami-086e2343a4a6631d8" # in us-west-1
-  instance_type = "t2.micro"
+  instance_type = "t2.xlarge"
   key_name      = "demo"
 
   network_interfaces {

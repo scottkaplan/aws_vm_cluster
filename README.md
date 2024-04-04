@@ -16,4 +16,6 @@ Turnup instructions:
 Current status:
 1. The worker VMs are coming up with an http server on port 80.
 1. The workers are passing health check
-1. The LB is not responding on port 443
+1. DNS is pointing to LB DNS
+1. The LB is not responding on port 443, troubleshoot by opening up the firewall/SG
+1. Storage is not provisioned
